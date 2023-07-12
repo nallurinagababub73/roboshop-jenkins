@@ -5,7 +5,7 @@
 
 - name: Create a jenkins job using basic authentication
   community.general.jenkins_job:
-    config: "{{ lookup('file', 'tmp/pipeline.xml') }}"
+    config: "{{ lookup('file', '/tmp/pipeline.xml') }}"
     name: ansible_job
     password: admin123
     url: http://172.31.89.168:8080
