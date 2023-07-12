@@ -1,5 +1,8 @@
 - name: Creating Jenkins jobs
   hosts: localhost
   connection: local
+  vars:
+    jobs:
+      - roboshop-terraform
   roles:
     - jenkins-jobs
