@@ -1,4 +1,9 @@
 - name: Creation sbranch pipeline jobs
   ansible.builtin.include_tasks:
-    file: job.yaml
-  loop: "{{ jobs }}"
+    file: sbp_job.yaml
+  loop: "{{ sbp_jobs }}"
+
+- name: Creation Muilty-branch pipeline jobs
+  ansible.builtin.include_tasks:
+    file: mbp_job.yaml
+  loop: "{{ mbp_jobs }}"
