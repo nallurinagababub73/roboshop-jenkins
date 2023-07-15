@@ -33,6 +33,9 @@ def call() {
                 }
             }
             stage ('Publish an artifactory') {
+                when {
+                    expression { env.TAG_NAME ==~ ".*" }
+                }
                 steps {
                     sh 'echo Publish an artifactory'
 
